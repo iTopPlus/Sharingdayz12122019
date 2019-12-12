@@ -1,0 +1,21 @@
+{
+    "extends": "lighthouse:default",
+    "settings": {
+        "budgets": [
+            {
+                "resourceCounts": [
+                    {
+                        "resourceType": "total",
+                        "budget": 150
+                    }
+                ],
+                "resourceSizes": [
+                    {
+                        "resourceType": "total",
+                        "budget": 9000
+                    }
+                ]
+            }
+        ]
+    }
+}
