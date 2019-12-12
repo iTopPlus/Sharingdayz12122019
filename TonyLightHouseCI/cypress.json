@@ -1,0 +1,11 @@
+{
+    "chromeWebSecurity": false,
+    "supportFile": "cypress/helper",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "ddmmyyyy_HHMMss"
+    }
+}

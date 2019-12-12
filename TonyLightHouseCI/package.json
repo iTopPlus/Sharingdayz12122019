@@ -1,0 +1,38 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:install": "cypress install --force",
+    "cypress:verify": "cypress verify",
+    "prerender:server1": "cypress run --headed --spec ./cypress/integration/PRERENDER/server1.test.js",
+    "prerender:server2": "cypress run --headed --spec ./cypress/integration/PRERENDER/server2.test.js",
+    "prerender:server3": "cypress run --headed --spec ./cypress/integration/PRERENDER/server3.test.js",
+    "start": "cypress run --browser chrome",
+    "cy": "cypress run",
+    "lighthouse:ci": "lighthouse-ci http://demo99.itopplus.com --report=mochawesome-report --config-path=config.json --performance=20",
+    "lighthouse": "npm run createfolder & npm run lighthouse:ci",
+    "createfolder": "mkdir mochawesome-report",
+    "test": "cypress open --browser chrome",
+    "firebase": "firebase deploy --token \"$FIREBASE_TOKEN\"",
+    "upload": "node ./src/upload.js test",
+    "cleanup": "rm -fr mochawesome-report",
+    "merge_reports": "mochawesome-merge > mochawesome-report/output.json",
+    "generate_mochawesome_report": "marge mochawesome-report/output.json",
+    "e2e_mochawesome": "npm run lighthouse ; npm run cleanup ; npm run cy ; npm run merge_reports ; npm run generate_mochawesome_report ; mv ./mochawesome-report/mochawesome-report/output.html ./mochawesome-report ; mv ./mochawesome-report/output.html ./mochawesome-report/index.html; npm run lighthouse:ci"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^4.1.3",
+    "cypress": "^3.7.0",
+    "firebase-tools": "^7.8.1",
+    "lighthouse-ci": "^1.10.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.1.0",
+    "request": "^2.88.0",
+    "zip-folder": "^1.0.0"
+  }
+}
