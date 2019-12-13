@@ -5,3 +5,7 @@
 P'Ton - Light House CI <br />
 Atom - Google Ads API (For Nodejs Including @itopplus/node-google-ads-api) <br />
 Jo+ - J-UNIT5 TEST JAVA Language <br />
+Flook: Spring Boot
+M: TDD
+Bew: Mysql Function
+Bank : PageObject Cypress
