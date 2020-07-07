@@ -11,6 +11,6 @@
   "dependencies": {
     "@itopplus/node-google-ads-api": "^1.0.6",
     "i": "^0.3.6",
-    "npm": "^6.13.4"
+    "npm": "^6.14.6"
   }
 }
